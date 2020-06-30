@@ -1,5 +1,11 @@
 # HTML, CSS
 docs: HTML, CSS에 대한 간략한 설명
+## 목차
+1. HTML
+2. CSS
+
+
+
 
 ## 1. html이란?
 * Hyper Text Markup Language
@@ -41,4 +47,30 @@ Non-Semantic (의미가 없는 tag들)
 > 즉, 고유하지 않은 반복되는 element의 경우 class를 적용한다.
 
 
+## 2. CSS란?
+* Selector 파트와 Property로 이루어짐.
+>```ruby
+>h1{   Property-value=true ; }
+> h1은 셀럭터 {}안의 내용이 property가 된다
+>```
+>모든 태그들이 셀렉터가 될 수 있음 , 그안의 값을 정하는 것을 property-value라 한다.
+
+### 2-1. CSS를 HTML에 넣는 방법
+* inline 방법
+```ruby
+<style>
+  background-color: red;
+}
+</style>
+```
+>하지만 같은 배경색을 써야하는 모든 html에 해당 css를 붙여넣기해야한다.
+>굉장히 **비효율적이다.
+
+* External 적용 방법
+css파일 자체를 적용시킨다. 적용방법은 html의 head에 css를 불러준다.
+```ruby 
+<link href="styles.css" rel="stylesheet">
+(css가 있는 파일의 경로를 넣어준다)
+```
+### 2-2. Box 모델
 
