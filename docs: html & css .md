@@ -36,14 +36,14 @@ Non-Semantic (의미가 없는 tag들)
 <span>텍스트를 위한 컨테이너가 필요할 때 사용</span>
 ```
 ### 1-4. ID & Class
->* ID : 각 element당 ID는 한개씩만 가질 수 있다. ID는 고유하기 때문에 마치 **여권번호**같은 것
+* ID : 각 element당 ID는 한개씩만 가질 수 있다. ID는 고유하기 때문에 마치 **여권번호**같은 것
 >```ruby
 ><header id="headerNumberOne" class="defaultHeader">
 >```
 > 즉, 고유한 element를 사용할때 ID를 적용한다.
 <br>
 
->* Class : 내 이름처럼 반복가능하다. 2개 이상의 element가 중복해서 class를 가질 수 있다.
+* Class : 내 이름처럼 반복가능하다. 2개 이상의 element가 중복해서 class를 가질 수 있다.
 > 즉, 고유하지 않은 반복되는 element의 경우 class를 적용한다.
 
 
@@ -96,3 +96,54 @@ border:5px solid red; 로 줄여쓸 수도 있다.
 ```
 
 ### 2-3. Inline & Block & Inline Block
+* [그림으로 먼저 알아보자](https://media.vlpt.us/images/zwon111/post/c5f3432a-0fd3-4965-9e42-822768481b2e/image.png)
+* Block : 바로 옆에 아무것도 없을 때, 블록이라고 한다. 무언가가 옆에 위치하면 안된다.
+* Inline-Block : 각 박스들이 서로 옆에 위치한다.
+* 디폴트 값은 block으로 된다.
+* 그렇다면 **Inline은?**
+박스의 모든 property 값을 지운다. 
+> Inline을 쓰면 블록이 아닌게 되고 텍스트처럼 적용이 된다. 
+> 즉, span에다가 쓸 수 있다. 내가 "test" 라는 글자를 썼으면 이 글자에 맞춰서 형성됨.
+> 컨텐츠의 길이만 존재한다고 생각하면 되겠다.
+> 헷갈릴 수도 있지만 그림으로 이해를 다시 해보길 바란다.
+
+### 2-4. Position Property (static, fixed, absoulte, relative)
+* position : static; 
+>스크롤이 됐을 때 그자리에 계속 남아있다.
+* position : fixed;
+>스크롤이 됐을 때 내 화면에 고정돼 있다.
+> 즉, 내가 스크롤을 내리면 Banner처럼 계속 따라오는 것은 fixed 되었기 때문이다.
+
+* 박스의 고유값 ID를 통해 간격을 줄 수 있다.
+```ruby
+#boxTwo
+ height:300px;
+ width:300px;
+ background-color: green;
+ position:fixed;
+ bottom:10px;
+ left : 0;
+ 
+ > 이를 이용해 상단 Banner가 따로오게 만들 수 있다.
+ ```
+ 
+ * position : absolute;
+ > 포지션 absolute가 설정되면 html 상에서 해당 element와 관계가 있는(relative-부모박스) element를 살펴보고 이에 상응해서 포지션이 결정됨.
+ > 부모 박스와 상응하는 관계가 없는 경우엔 우리가 설정한 값대로 움직인다.
+ 
+ ```ruby
+ .abs-box{
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  position:relative **이 값이 없으면 자식이 상응하는 관계 찾지못한다**
+  }
+ .abs-child{
+ width: 400px;
+  height: 400px;
+  background-color: yellow;
+  position:absolute  (relative가 없으면 의미가 없다)
+  }
+  
+  ```
+  
