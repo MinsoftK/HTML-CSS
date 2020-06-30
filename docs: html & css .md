@@ -48,6 +48,7 @@ Non-Semantic (의미가 없는 tag들)
 
 
 ## 2. CSS란?
+* html을 더욱 쉽고 사용자가 보기 좋게 스타일을 꾸밀 수 있게 도와주는 속성
 * Selector 파트와 Property로 이루어짐.
 >```ruby
 >h1{   Property-value=true ; }
