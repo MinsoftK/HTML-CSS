@@ -1,4 +1,4 @@
-# html, CSS
+# HTML, CSS
 docs: HTML, CSS에 대한 간략한 설명
 
 ## 1. html이란?
