@@ -75,7 +75,8 @@ css파일 자체를 적용시킨다. 적용방법은 html의 head에 css를 불�
 ```
 ### 2-2. Box 모델
 * [Box model](https://media.vlpt.us/images/kpl5672/post/de021ddb-fe7e-4041-9224-15748afdb064/boxmodel.gif)을 그림으로 먼저 확인해보자.
-* border를 기준으로 안쪽을 padding 바깥쪽을 margin이라고 한다. 어느 방향으로 원하는대로 간격을 조절할 수 있다. 
+* 그림과 같이 우리가 작성한 내용인 Content를 감싸는 padding 그것을 감싸고 있는 border, 이것을 감싸는 margin이 있다.
+* 정리하면 border를 기준으로 안쪽을 padding 바깥쪽을 margin이라고 한다. 어느 방향으로 원하는대로 간격을 조절할 수 있다. 
 
 ```ruby
 만약 padding을 상-하-좌-우 모두 간격을 주고 싶으면 
